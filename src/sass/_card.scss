@@ -1,0 +1,39 @@
+@use "variables";
+
+.direction-card {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+
+.container-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 140px;
+  width: "100%";
+  margin: 15px 100px 5px 100px;
+  border-radius: 5px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 4px 8px variables.$DesaturatedDarkCyan;
+}
+
+.featured-card {
+  position: relative;
+
+  ::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 100%;
+    background-color: variables.$DesaturatedDarkCyan;
+    border-radius: 5px;
+  }
+}
+
+.text-tech {
+  cursor: pointer;
+}

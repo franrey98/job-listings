@@ -1,0 +1,19 @@
+@use "card";
+@use "variables";
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: variables.$LightGrayishCyanBackground;
+  font-family: "League Spartan", sans-serif;
+  font-weight: 500;
+  max-width: variables.$Desktop;
+  margin: 0 auto;
+}
