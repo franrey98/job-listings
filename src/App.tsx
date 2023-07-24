@@ -3,6 +3,7 @@ import data from "../public/mocks/data.json";
 import Cards from "./components/Cards/Cards";
 import useSelectedTech from "./hooks/useSelectedTech";
 import BarTech from "./components/BarTech/BarTech";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   const { BgHeaderDesktop } = Icons;
@@ -37,6 +38,7 @@ function App() {
               />
             ))}
       </div>
+      <Footer />
     </>
   );
 }
