@@ -19,6 +19,15 @@
   box-shadow: 0 4px 8px variables.$DesaturatedDarkCyan;
 }
 
+@media screen and (max-width: 990px) {
+  .container-card {
+    flex-direction: column;
+    height: 240px;
+    justify-content: space-evenly;
+    margin: 15px 10px 5px 10px;
+  }
+}
+
 .featured-card {
   position: relative;
 
@@ -105,6 +114,12 @@
   color: variables.$DesaturatedDarkCyan;
   font-size: 18px;
   font-weight: bold;
+}
+
+@media screen and (max-width: 990px) {
+  .direction-tech {
+    flex-wrap: wrap;
+  }
 }
 
 .text-tech {

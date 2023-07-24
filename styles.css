@@ -17,6 +17,14 @@
   box-shadow: 0 4px 8px hsl(180, 29%, 50%);
 }
 
+@media screen and (max-width: 990px) {
+  .container-card {
+    flex-direction: column;
+    height: 240px;
+    justify-content: space-evenly;
+    margin: 15px 10px 5px 10px;
+  }
+}
 .featured-card {
   position: relative;
 }
@@ -108,6 +116,11 @@
   font-weight: bold;
 }
 
+@media screen and (max-width: 990px) {
+  .direction-tech {
+    flex-wrap: wrap;
+  }
+}
 .text-tech {
   cursor: pointer;
 }
@@ -124,6 +137,12 @@
   margin: 0px 100px -50px 100px;
 }
 
+@media screen and (max-width: 990px) {
+  .container-bar {
+    margin: 0px 20px;
+    flex-wrap: wrap;
+  }
+}
 .position-bar {
   position: relative;
   top: -30px;

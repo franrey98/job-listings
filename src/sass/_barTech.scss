@@ -4,6 +4,13 @@
   margin: 0px 100px -50px 100px;
 }
 
+@media screen and (max-width: 990px) {
+  .container-bar {
+    margin: 0px 20px;
+    flex-wrap: wrap;
+  }
+}
+
 .position-bar {
   position: relative;
   top: -30px;

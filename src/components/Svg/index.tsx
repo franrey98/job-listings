@@ -4,7 +4,7 @@ export const Icons = {
   BgHeaderDesktop: (props: T) => (
     <svg
       {...props}
-      width="1440"
+      width="100%"
       height="156"
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
