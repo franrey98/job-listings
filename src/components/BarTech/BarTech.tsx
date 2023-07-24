@@ -2,34 +2,28 @@ import { Dispatch, SetStateAction } from "react";
 
 interface PropsBarTech {
   techSelected: string[];
-  setTechSelected: Dispatch<SetStateAction<never[]>>;
+  setTechSelected: Dispatch<SetStateAction<string[]>>;
 }
 
 const BarTech = ({ techSelected, setTechSelected }: PropsBarTech) => {
-  console.log(techSelected);
+  const handleDelete = (tech: string) => {
+    setTechSelected(techSelected.filter((techInBar) => techInBar !== tech));
+  };
 
   return (
-    <div style={{ margin: "0px 100px -50px 100px" }}>
-      <div
-        style={{
-          position: "relative",
-          top: "-30px",
-          height: "50px",
-          width: "100%",
-          borderRadius: "5px",
-          backgroundColor: "rgb(255, 255, 255)",
-          boxShadow: " 0 4px 8px hsl(180, 29%, 50%)",
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-        }}
-      >
-        <div style={{ display: "flex", gap: "5px", marginLeft: "20px" }}>
+    <div className="container-bar">
+      <div className={"position-bar"}>
+        <div className="container-tech">
           {techSelected.map((tech) => (
-            <p key={tech}>{tech}</p>
+            <div key={tech} className="display-tech">
+              <p className="text-tech-bar">{tech}</p>
+              <p className="delete-tech" onClick={() => handleDelete(tech)}>
+                x
+              </p>
+            </div>
           ))}
         </div>
-        <div style={{ marginRight: "20px" }}>
+        <div className="clear-button">
           <p onClick={() => setTechSelected([])}>Clear</p>
         </div>
       </div>
