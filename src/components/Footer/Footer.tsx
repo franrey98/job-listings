@@ -3,7 +3,6 @@ const Footer = () => {
     <div
       style={{
         textAlign: "center",
-        position: "absolute",
         width: "100%",
         paddingBottom: "1.5rem",
       }}
