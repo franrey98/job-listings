@@ -6,7 +6,8 @@ import BarTech from "./components/BarTech/BarTech";
 
 function App() {
   const { BgHeaderDesktop } = Icons;
-  const { techSelected, selectTech, setTechSelected } = useSelectedTech();
+  const { techSelected, selectTech, setTechSelected, filterArray } =
+    useSelectedTech();
 
   return (
     <>
@@ -18,14 +19,23 @@ function App() {
         />
       )}
       <div className="direction-card">
-        {data.map((item) => (
-          <Cards
-            techSelected={techSelected}
-            selectTech={selectTech}
-            key={item.id}
-            item={item}
-          />
-        ))}
+        {techSelected.length === 0
+          ? data.map((item) => (
+              <Cards
+                techSelected={techSelected}
+                selectTech={selectTech}
+                key={item.id}
+                item={item}
+              />
+            ))
+          : filterArray.map((item) => (
+              <Cards
+                techSelected={techSelected}
+                selectTech={selectTech}
+                key={item.id}
+                item={item}
+              />
+            ))}
       </div>
     </>
   );

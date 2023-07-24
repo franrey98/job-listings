@@ -2,11 +2,13 @@ import { Dispatch, SetStateAction } from "react";
 
 interface PropsBarTech {
   techSelected: string[];
-  setTechSelected: Dispatch<SetStateAction<never[]>>;
+  setTechSelected: Dispatch<SetStateAction<string[]>>;
 }
 
 const BarTech = ({ techSelected, setTechSelected }: PropsBarTech) => {
-  console.log(techSelected);
+  const handleDelete = (tech: string) => {
+    setTechSelected(techSelected.filter((techInBar) => techInBar !== tech));
+  };
 
   return (
     <div style={{ margin: "0px 100px -50px 100px" }}>
@@ -26,10 +28,32 @@ const BarTech = ({ techSelected, setTechSelected }: PropsBarTech) => {
       >
         <div style={{ display: "flex", gap: "5px", marginLeft: "20px" }}>
           {techSelected.map((tech) => (
-            <p key={tech}>{tech}</p>
+            <div
+              key={tech}
+              style={{
+                display: "flex",
+                gap: "5px",
+                marginRight: "10px",
+                alignItems: "center",
+              }}
+            >
+              <p>{tech}</p>
+              <p
+                style={{ cursor: "pointer" }}
+                onClick={() => handleDelete(tech)}
+              >
+                x
+              </p>
+            </div>
           ))}
         </div>
-        <div style={{ marginRight: "20px" }}>
+        <div
+          style={{
+            marginRight: "20px",
+            cursor: "pointer",
+            textDecorationLine: "underline",
+          }}
+        >
           <p onClick={() => setTechSelected([])}>Clear</p>
         </div>
       </div>

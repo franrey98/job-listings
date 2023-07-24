@@ -7,7 +7,7 @@ interface PropsCard {
 }
 
 const Cards = ({ item, selectTech, techSelected }: PropsCard) => {
-  const techMarked = () => {};
+  console.log(techSelected);
 
   return (
     <div className={`container-card ${item.featured ? "featured-card" : ""}`}>
