@@ -31,8 +31,149 @@
   border-radius: 5px;
 }
 
+.information-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+  margin-left: 15px;
+}
+
+.direction-information-card {
+  display: flex;
+  flex-direction: column;
+  height: 4.7rem;
+  justify-content: space-between;
+}
+
+.direction-information-company {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.text-information-company {
+  color: hsl(180, 29%, 50%);
+  font-size: 18px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.container-button-new {
+  background-color: hsl(180, 29%, 50%);
+  padding: 3px 1px 3px 1px;
+  margin: 0px 5px 0px 5px;
+  border-radius: 10px;
+}
+
+.button-new {
+  margin: 0px 10px 0px 10px;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.container-button-featured {
+  background-color: black;
+  padding: 3px 8px 3px 8px;
+  margin: 0px 5px 0px 5px;
+  border-radius: 10px;
+}
+
+.button-featured {
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.text-position {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.container-info-job {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: gray;
+}
+
+.direction-tech {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-right: 15px;
+  color: hsl(180, 29%, 50%);
+  font-size: 18px;
+  font-weight: bold;
+}
+
 .text-tech {
   cursor: pointer;
+}
+
+.active-text-tech {
+  color: white;
+  border-radius: 5px;
+  padding: 5px;
+  background-color: hsl(180, 29%, 50%);
+  cursor: pointer;
+}
+
+.container-bar {
+  margin: 0px 100px -50px 100px;
+}
+
+.position-bar {
+  position: relative;
+  top: -30px;
+  height: 50px;
+  width: 100;
+  border-radius: 5px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 4px 8px hsl(180, 29%, 50%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container-tech {
+  display: flex;
+  gap: 5px;
+  margin-left: 20px;
+}
+
+.display-tech {
+  display: flex;
+  gap: 5px;
+  margin-right: 10px;
+  align-items: center;
+}
+
+.text-tech-bar {
+  color: hsl(180, 29%, 50%);
+}
+
+.delete-tech {
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  background: hsl(180, 29%, 50%);
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+}
+.delete-tech:hover {
+  background-color: hsl(180, 14%, 20%);
+}
+
+.clear-button {
+  color: hsl(180, 29%, 50%);
+  margin-right: 20px;
+  cursor: pointer;
+}
+.clear-button:hover {
+  text-decoration-line: underline;
 }
 
 *,

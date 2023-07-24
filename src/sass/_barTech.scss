@@ -1,0 +1,57 @@
+@use "variables";
+
+.container-bar {
+  margin: 0px 100px -50px 100px;
+}
+
+.position-bar {
+  position: relative;
+  top: -30px;
+  height: 50px;
+  width: 100;
+  border-radius: 5px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 4px 8px hsl(180, 29%, 50%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container-tech {
+  display: flex;
+  gap: 5px;
+  margin-left: 20px;
+}
+
+.display-tech {
+  display: flex;
+  gap: 5px;
+  margin-right: 10px;
+  align-items: center;
+}
+
+.text-tech-bar {
+  color: variables.$DesaturatedDarkCyan;
+}
+
+.delete-tech {
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  background: variables.$DesaturatedDarkCyan;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  &:hover {
+    background-color: variables.$VeryDarkGrayishCyan;
+  }
+}
+
+.clear-button {
+  color: variables.$DesaturatedDarkCyan;
+  margin-right: 20px;
+  cursor: pointer;
+  &:hover {
+    text-decoration-line: underline;
+  }
+}
